@@ -1,0 +1,398 @@
+/* ---------- GENERAL ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#07151f;
+    color:white;
+    line-height:1.8;
+}
+
+section{
+    width:80%;
+    max-width:1100px;
+    margin:auto;
+    padding:90px 0;
+}
+
+h2{
+    font-size:2.8rem;
+    margin-bottom:35px;
+    text-align:center;
+    color:#5fd3ff;
+}
+
+p{
+    font-size:1.05rem;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(5,18,30,.82);
+    backdrop-filter:blur(12px);
+    z-index:999;
+}
+
+nav h1{
+    color:#6fdfff;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#5fd3ff;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    text-align:center;
+}
+
+.hero h2{
+    font-size:4.3rem;
+    color:white;
+}
+
+.hero p{
+    font-size:1.4rem;
+    margin:25px 0;
+}
+
+.button{
+
+    display:inline-block;
+    padding:14px 34px;
+
+    background:#149ed8;
+
+    color:white;
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#27c6ff;
+    transform:translateY(-3px);
+
+}
+
+/* ---------- INTRO / CONTENT ---------- */
+
+#intro,
+#background,
+#final,
+#bibliography{
+
+    background:#0d2434;
+
+    margin-top:60px;
+
+    padding:70px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+.timeline::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+
+    background:#4fd7ff;
+
+    top:0;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:25px 40px;
+
+}
+
+.timeline-item.left{
+
+    left:0;
+
+    text-align:right;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+}
+
+.timeline-content{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.timeline-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#5fd3ff;
+
+    top:40px;
+
+    z-index:10;
+
+    box-shadow:0 0 20px #5fd3ff;
+
+}
+
+.timeline-item.left::after{
+
+    right:-11px;
+
+}
+
+.timeline-item.right::after{
+
+    left:-11px;
+
+}
+
+.timeline h3{
+
+    color:#6edfff;
+
+    margin-bottom:8px;
+
+}
+
+.timeline h4{
+
+    color:#c9f6ff;
+
+    margin-bottom:15px;
+
+    font-weight:500;
+
+}
+
+/* ---------- SOURCES ---------- */
+
+.sources{
+
+    margin-top:25px;
+
+    padding-left:25px;
+
+}
+
+.sources li{
+
+    margin-bottom:18px;
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    text-align:center;
+
+    padding:60px;
+
+    background:#05111b;
+
+}
+
+/* ---------- SCROLL ANIMATION ---------- */
+
+.timeline-item,
+section{
+
+    opacity:0;
+
+    transform:translateY(45px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:900px){
+
+.timeline::after{
+
+left:30px;
+
+}
+
+.timeline-item{
+
+width:100%;
+
+padding-left:80px;
+padding-right:20px;
+
+left:0 !important;
+text-align:left;
+
+}
+
+.timeline-item.left::after,
+.timeline-item.right::after{
+
+left:21px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h2{
+
+font-size:2.8rem;
+
+}
+
+#intro,
+#background,
+#final,
+#bibliography{
+
+padding:35px;
+
+width:95%;
+
+}
+
+section{
+
+width:95%;
+
+}
+
+}
