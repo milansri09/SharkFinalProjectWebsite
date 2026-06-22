@@ -313,13 +313,10 @@ footer{
 
 /* ---------- SCROLL ANIMATION ---------- */
 
-.timeline-item,
-section{
+.timeline-item{
 
     opacity:0;
-
     transform:translateY(45px);
-
     transition:all .8s ease;
 
 }
