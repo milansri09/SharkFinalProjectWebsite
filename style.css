@@ -66,6 +66,11 @@ nav a{
     transition:.3s;
 }
 
+nav a.active{
+    color:#5fd3ff;
+    font-weight:600;
+}
+
 nav a:hover{
     color:#5fd3ff;
 }
