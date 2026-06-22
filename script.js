@@ -1,7 +1,5 @@
 // Elements that will fade in
-const hiddenElements = document.querySelectorAll(
-    "section, .timeline-item"
-);
+const hiddenElements = document.querySelectorAll(".timeline-item");
 
 // Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
